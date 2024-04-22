@@ -21,7 +21,7 @@ void test1(){
 	L1.push_back(58);
 	L1.push_back(49);
 	printlist(L1);
-
+//构造与复制构造list
 	list<int>L2(L1.begin(),L1.end());
 	printlist(L2);
 
@@ -35,13 +35,15 @@ void test1(){
 	L5 = L4;
 	printlist(L5);
 	
-	swap(L2,L5);
+	swap(L2,L5);//交换
 	printlist(L5);
-	cout<<L5.size()<<endl;
-
+	cout<<L5.size()<<endl;//元素个数
+	
+//迭代器
 	list<int>::iterator it = L1.begin();
 	cout<<*++it<<endl;
-
+	
+//排序算法
 	L1.sort();
 	printlist(L1);
 	L1.sort(mycompare);
